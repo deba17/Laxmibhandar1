@@ -1,0 +1,9 @@
+#!/bin/bash
+yum update -y
+yum install -y httpd
+yum install -y wget
+chkconfig httpd on
+cd /var/www/html
+wget https://raw.githubusercontent.com/deba17/laxmibhandar/master/index.html?token=AKSPIXPOEQYYVV25LWBZXXS62GBOM
+wget https://raw.githubusercontent.com/deba17/laxmibhandar/master/laxmibhandar.jpg?token=AKSPIXPOEQYYVV25LWBZXXS62GBOM
+service httpd start
